@@ -1,0 +1,66 @@
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+}
+
+a{
+text-decoration: none;
+}
+
+h1{
+    color: rgb(63, 9, 114);
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+.accordion{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px black;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.meme-row{
+    display: flex;
+    justify-content: space-between;
+align-items: center;    
+padding: 20px 50px 20px 0px;
+
+border-top: 2px solid gray;
+}
+
+.meme-row span{
+visibility: hidden;
+text-align: right;
+/* opacity: 0; */
+}
+
+
+.accordion:hover span{
+    visibility: visible;
+    /* opacity: 1; */
+    color: red;
+}
+
+.accordion span:active{
+    color: blue;
+}
+
+
+.meme{
+    width: 25rem;
+}
