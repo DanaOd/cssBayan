@@ -1,66 +1,90 @@
-*, :before, :after {
-    box-sizing: border-box;
+*,
+:before,
+:after {
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 20px;
+html {
+  font-size: 32px;
 }
 
-a{
-text-decoration: none;
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
 }
 
-h1{
-    color: rgb(63, 9, 114);
+body {
+  background-color: blanchedalmond;
 }
-
-body{
-    background-color: blanchedalmond;
-}
-
-.accordion{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 2px black;
-}
-
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  text-align: right;
+  width: 5%;
+}
+/*--------------------------*/
+.accordion {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 20px 200px 20px;
+  border: 2px solid  rgb(167, 167, 167);
+  border-radius: 20px;
 }
 
-.meme-row{
-    display: flex;
-    justify-content: space-between;
-align-items: center;    
-padding: 20px 50px 20px 0px;
-
-border-top: 2px solid gray;
+.accordion-item {
+  display: block;
 }
 
-.meme-row span{
-visibility: hidden;
-text-align: right;
-/* opacity: 0; */
+span {
+  visibility: hidden;
+  text-align: right;
+}
+
+.accordion:hover span {
+  visibility: visible;
+  color: rgb(112, 22, 196);
+}
+
+.meme {
+    display: none;
+    transition: display 0.5s ease-out;
+
+}
+
+.label {
+  display: inline-block;
+  padding: 20px;
+  width: 95%;
+  cursor: pointer;
+  color: black;
+  transition: color 0.2s ease-out;
+
+  border-bottom: 1px solid rgb(167, 167, 167);
+  text-align: justify;
+}
+
+.label:hover {
+  color: rgb(112, 22, 196);
+}
+
+.input {
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+.input:checked ~ .meme {
+  display: block;
+  width: 25rem;
+
+
+}
+
+.input:checked ~ .material-symbols-outlined {
+  transform: rotateX("45");
 }
 
 
-.accordion:hover span{
-    visibility: visible;
-    /* opacity: 1; */
-    color: red;
-}
-
-.accordion span:active{
-    color: blue;
-}
-
-
-.meme{
-    width: 25rem;
-}
