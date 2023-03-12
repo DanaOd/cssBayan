@@ -30,12 +30,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 40px 20px 200px 20px;
-  border: 2px solid  rgb(167, 167, 167);
+  border: 2px solid rgb(167, 167, 167);
   border-radius: 20px;
 }
 
 .accordion-item {
   display: block;
+  border-bottom: 1px solid rgb(167, 167, 167);
+
 }
 
 span {
@@ -49,9 +51,8 @@ span {
 }
 
 .meme {
-    display: none;
-    transition: display 0.5s ease-out;
-
+  display: none;
+  transition: display 500 ease-out;
 }
 
 .label {
@@ -62,7 +63,6 @@ span {
   color: black;
   transition: color 0.2s ease-out;
 
-  border-bottom: 1px solid rgb(167, 167, 167);
   text-align: justify;
 }
 
@@ -78,13 +78,13 @@ span {
 
 .input:checked ~ .meme {
   display: block;
-  width: 25rem;
-
+  padding: 20px 0px;
+  width: 15rem;
+  transition: display 0.5s ease-out;
 
 }
 
-.input:checked ~ .material-symbols-outlined {
-  transform: rotateX("45");
+.input:checked span {
+  transform: rotate("45");
 }
-
 
