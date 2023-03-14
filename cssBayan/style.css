@@ -4,17 +4,23 @@
   box-sizing: border-box;
 }
 
-html {
+h2 {
   font-size: 1.5em;
+  line-height: 1.5em;
   font-weight: 700;
+  padding: 0;
+  margin: 0;
 
+}
+
+div{
+  padding: 0;
 }
 
 a {
   text-decoration: none;
   padding: 0;
   margin: 0;
-  color: inherit;
 }
 
 body {
@@ -37,7 +43,10 @@ body {
 }
 
 .accordion-item {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
   border-bottom: 0.1em solid rgb(167, 167, 167);
 
 }
@@ -52,15 +61,18 @@ span {
   color: rgb(112, 22, 196);
 }
 
-.meme {
-  display: none;
-  transition: display 0.5s ease-out;
-}
+/* .accordion-item:hover .meme{
+transition: all 1s ease-in-out;
+
+} */
 
 .label {
-  display: inline-block;
+  display: flex;
+  min-width: 100%;
+
   padding: 1em;
-  width: 95%;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   color: black;
   transition: color 0.2s ease-out;
@@ -76,29 +88,78 @@ span {
   width: 0;
   height: 0;
   appearance: none;
-  transition: display 0.5s ease-out;
-
+  transition: all 500 ease-in;
 }
 
-.input:checked ~ .meme {
-  display: block;
-  padding: 1em 0px;
-  width: 20em;
-  text-align: center;
-  transition: display 0.5s ease-out;
+.meme {
+  visibility: hidden;
 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+transition: all 500 ease-in;
+}
+
+
+.input:checked ~ .meme {
+  display: flex;
+  visibility: visible;
+
+  margin: 0 auto 1em auto;
+  width: 100%;
+  height: 25em;
+
+  cursor: pointer;
 }
 
 .input:hover ~ .meme {
-  display: block;
-  padding: 0 0 1em 0;
-  width: 20em;
-  text-align: center;
-  transition: display 0.5s ease-out;
+  display: flex;
+  visibility: visible;
+
+
+  margin: 0 auto 1em auto;
+  width: 100%;
+  height: 25em;
+
+  cursor: pointer;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
 }
 
 .input:checked span {
-  transform: rotate("45");
+  transition: .3s ease all;
+  rotate: (30deg);
 }
 
+
+.meme-1{
+  background-image: url(./images/fullstack.png);
+}
+
+.meme-2{
+  background-image: url(./images/elephant.jpg);
+}
+
+.meme-3{
+  background-image: url(./images/squadgame.png);
+}
+
+.meme-4{
+  background-image: url(./images/types.png);
+}
+
+.meme-5{
+  background-image: url(./images/manager.jpg);
+}
+
+.meme-6{
+  background-image: url(./images/emails.jpg);
+}
+
+.meme-7{
+  background-image: url(./images/backend.jpg);
+}
