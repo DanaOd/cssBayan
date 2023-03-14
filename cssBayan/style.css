@@ -4,162 +4,241 @@
   box-sizing: border-box;
 }
 
-h2 {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
+
+
+
+  h1{
+    font-size: 4em;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  
+  }
+  
+  div{
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-color: blanchedalmond;
+  }
+  
+  
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+    text-align: right;
+    width: 5%;
+  }
+  /*--------------------------*/
+  .accordion {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em 1em 10em 1em;
+    border: 0.1em solid rgb(167, 167, 167);
+    border-radius: 0.5em;
+  }
+  
+  .accordion-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  
+    border-bottom: 0.1em solid rgb(167, 167, 167);
+  
+  }
+  
+  span {
+    visibility: hidden;
+    text-align: right;
+  }
+  
+  .accordion:hover span {
+    visibility: visible;
+    color: rgb(112, 22, 196);
+  }
+  
+  
+  .label {
+    display: flex;
+    min-width: 100%;
+    padding: 1em;
+  
+    justify-content: space-between;
+    align-items: center;
+  
+    cursor: pointer;
+    color: black;
+    transition: color 0.2s ease-out;
+  
+    text-align: justify;
+  }
+  
+  .label:hover {
+    color: rgb(112, 22, 196);
+  }
+  
+  .input {
+    width: 0;
+    height: 0;
+    appearance: none;
+  }
+  
+  .meme {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+  
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  transition: all 500ms ease-in;
+  }
+  
+  
+  .input:checked ~ .meme {
+    display: flex;
+    visibility: visible;
+  
+    margin: 0 auto 1em auto;
+    width: 100%;
+    height: 25em;
+    opacity: 1;
+  
+    cursor: pointer;
+  }
+  
+  .input:hover ~ .meme {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  
+  
+    margin: 0 auto 1em auto;
+    width: 100%;
+    height: 25em;
+  
+    cursor: pointer;
+  
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+  
+  .input:checked span {
+    transition: .3s ease all;
+    rotate: (30deg);
+  }
+  
+  
+  .meme-1{
+    background-image: url(./images/fullstack.png);
+  }
+  
+  .meme-2{
+    background-image: url(./images/elephant.jpg);
+  }
+  
+  .meme-3{
+    background-image: url(./images/squadgame.png);
+  }
+  
+  .meme-4{
+    background-image: url(./images/types.png);
+  }
+  
+  .meme-5{
+    background-image: url(./images/manager.jpg);
+  }
+  
+  .meme-6{
+    background-image: url(./images/emails.jpg);
+  }
+  
+  .meme-7{
+    background-image: url(./images/backend.jpg);
+  }
+  
+
+
+
+
+
+@media (max-width: 25em)  {
+
+  h1{
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  .accordion {
+    padding: 1em 0.5em 3em 0.5em;
+  }
+
+  .label {
+    display: flex;
+    min-width: 100%;
+    padding: 0.5em;
+  }
+
+
+  .input:hover ~ .meme {
+    height: 15em;
+  }
+
+  .input:checked ~ .meme {
+    height: 15em;
+  }
 
 }
 
-div{
-  padding: 0;
-}
 
-a {
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: blanchedalmond;
-}
-
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-  text-align: right;
-  width: 5%;
-}
-/*--------------------------*/
-.accordion {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2em 1em 10em 1em;
-  border: 0.1em solid rgb(167, 167, 167);
-  border-radius: 0.5em;
-}
-
-.accordion-item {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-
-  border-bottom: 0.1em solid rgb(167, 167, 167);
-
-}
-
-span {
-  visibility: hidden;
-  text-align: right;
-}
-
-.accordion:hover span {
-  visibility: visible;
-  color: rgb(112, 22, 196);
-}
-
-/* .accordion-item:hover .meme{
-transition: all 1s ease-in-out;
-
-} */
-
-.label {
-  display: flex;
-  min-width: 100%;
-
-  padding: 1em;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  color: black;
-  transition: color 0.2s ease-out;
-
-  text-align: justify;
-}
-
-.label:hover {
-  color: rgb(112, 22, 196);
-}
-
-.input {
-  width: 0;
-  height: 0;
-  appearance: none;
-  transition: all 500 ease-in;
-}
-
-.meme {
-  visibility: hidden;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-transition: all 500 ease-in;
-}
-
-
-.input:checked ~ .meme {
-  display: flex;
-  visibility: visible;
-
-  margin: 0 auto 1em auto;
-  width: 100%;
-  height: 25em;
-
-  cursor: pointer;
-}
-
-.input:hover ~ .meme {
-  display: flex;
-  visibility: visible;
-
-
-  margin: 0 auto 1em auto;
-  width: 100%;
-  height: 25em;
-
-  cursor: pointer;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-
-.input:checked span {
-  transition: .3s ease all;
-  rotate: (30deg);
-}
-
-
-.meme-1{
-  background-image: url(./images/fullstack.png);
-}
-
-.meme-2{
-  background-image: url(./images/elephant.jpg);
-}
-
-.meme-3{
-  background-image: url(./images/squadgame.png);
-}
-
-.meme-4{
-  background-image: url(./images/types.png);
-}
-
-.meme-5{
-  background-image: url(./images/manager.jpg);
-}
-
-.meme-6{
-  background-image: url(./images/emails.jpg);
-}
-
-.meme-7{
-  background-image: url(./images/backend.jpg);
-}
+@media (min-width: 25em) and (max-width: 51.5em) {
+  
+    h1{
+      font-size: 2em;
+    }
+  
+    h2 {
+      font-size: 1.4em; 
+      font-weight: 400;
+    }
+  
+    .accordion {
+      padding: 1em 0.5em 3em 0.5em;
+    }
+  
+    .label {
+      display: flex;
+      min-width: 100%;
+      padding: 0.5em;
+    }
+  
+  
+    .input:hover ~ .meme {
+      height: 15em;
+    }
+  
+    .input:checked ~ .meme {
+      height: 15em;
+    }
+  
+  }
+  
