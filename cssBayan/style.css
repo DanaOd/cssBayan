@@ -5,7 +5,9 @@
 }
 
 html {
-  font-size: 32px;
+  font-size: 1.5em;
+  font-weight: 700;
+
 }
 
 a {
@@ -29,14 +31,14 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px 20px 200px 20px;
-  border: 2px solid rgb(167, 167, 167);
-  border-radius: 20px;
+  padding: 2em 1em 10em 1em;
+  border: 0.1em solid rgb(167, 167, 167);
+  border-radius: 0.5em;
 }
 
 .accordion-item {
   display: block;
-  border-bottom: 1px solid rgb(167, 167, 167);
+  border-bottom: 0.1em solid rgb(167, 167, 167);
 
 }
 
@@ -52,12 +54,12 @@ span {
 
 .meme {
   display: none;
-  transition: display 500 ease-out;
+  transition: display 0.5s ease-out;
 }
 
 .label {
   display: inline-block;
-  padding: 20px;
+  padding: 1em;
   width: 95%;
   cursor: pointer;
   color: black;
@@ -74,12 +76,24 @@ span {
   width: 0;
   height: 0;
   appearance: none;
+  transition: display 0.5s ease-out;
+
 }
 
 .input:checked ~ .meme {
   display: block;
-  padding: 20px 0px;
-  width: 15rem;
+  padding: 1em 0px;
+  width: 20em;
+  text-align: center;
+  transition: display 0.5s ease-out;
+
+}
+
+.input:hover ~ .meme {
+  display: block;
+  padding: 0 0 1em 0;
+  width: 20em;
+  text-align: center;
   transition: display 0.5s ease-out;
 
 }
